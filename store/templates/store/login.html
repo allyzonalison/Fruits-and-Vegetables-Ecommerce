@@ -1,0 +1,83 @@
+{% load static %}
+
+<html>
+    <head>
+        <style>
+            * {
+            box-sizing: border-box;
+            margin: 0;
+            }
+
+            /* Create two equal columns that floats next to each other */
+            .column-1{
+            background-image: url("{% static 'images/loginmainpic.jpg' %}");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            float: left;
+            width: 60%;
+            padding: 10px;
+            height: 100%; /* Should be removed. Only for demonstration */
+            }
+
+            .column-2{
+            background-color: #89A846;
+            margin: 0;
+            float: left;
+            width: 40%;
+            padding: 10px;
+            height: 100%; /* Should be removed. Only for demonstration */
+            position: relative;
+            }
+
+            .widgets-inside {
+                justify-content: space-evenly;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 20%;
+                margin: 0 auto;
+                position: absolute;
+                top: 40%;
+                left: 35%;
+                color: white;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            #ip2 {
+                border-radius: 20px;
+                border: 2px solid #fff;
+                padding: 20px; 
+                width: 250px;
+                height: 15px;  
+            }
+
+            ::placeholder {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 16px;
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <div class="row">
+        <div class="column-1"></div>
+        <div class="column-2">
+            <div class="widgets-inside">
+                <img src="{% static 'images/allyzon-logo.png' %}">
+                <input type="text" id="ip2" placeholder="username"/>
+                <input type="text" id="ip2" placeholder="password"/>
+                <br>
+                <a href="#"><p>LOGIN</p></a>
+                <a href="{% url 'register' %}"><p>Don't have an account? Sign Up</p></a>
+            </div>
+        </div>
+        </div>
+    </body>
+</html>

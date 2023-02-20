@@ -1,0 +1,66 @@
+{% extends 'store/main.html' %}
+
+{% load static %}
+
+{% block content %}
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        .column-1{
+            margin: 0;
+            float: left;
+            width: 50%;
+            padding: 10px;/* Should be removed. Only for demonstration */
+            position: relative;
+        }
+
+        .column-2{
+            margin: 0;
+            float: left;
+            width: 50%;
+            padding: 10px;/* Should be removed. Only for demonstration */
+        }
+
+        .footer {
+            background-color: #F2F2F2;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            height: 70px;
+        }
+    </style>
+    <body>
+        <div class="column-1">
+            <br><br><br>
+            <h2>allyzon</h2>
+            <p>
+                Filipino startup Allyzon, is an online service that delivers fresh groceries<br>
+                at your doorstep. It is not only seeing phenomenal sales growth but is also<br>
+                getting adequate attention from investors. Recently the app received<br>
+                100 billion won or about $88 million in Series D funding from its existing investors.<br>
+
+                Allyzon got its funding from investors at home and abroad including Capital<br>
+                China, Global Venture Partners based in London and Berlin and Mirae Asset<br>
+                Venture Investment in Korea. The startup plans to utilise the investment to<br>
+                expand its supply chain area and increase its labour force to deliver more<br>
+                and better stuff.<br>
+            </p>
+        </div>
+        <br><br>
+        <div class="column-2">
+            <img src="{% static 'images/about-main-pic.png' %}" width="600px">
+        </div>
+
+        <div class="footer">
+            <br>
+            <p>Built and Designed by Aira Allyzon Claveria</p>
+        </div>
+
+    </body>
+{% endblock %}

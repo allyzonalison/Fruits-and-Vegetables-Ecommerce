@@ -1,0 +1,79 @@
+{% load static %}
+
+<html>
+    <head>
+        <style>
+           *{
+            box-sizing: border-box;
+            margin: 0;
+            }
+
+            .column-1{
+                background-color: #89A846;
+                margin: 0;
+                float: left;
+                width: 45%;
+                padding: 10px;/* Should be removed. Only for demonstration */
+                position: relative;
+            }
+
+            .column-2{
+                background-image: url("{% static 'images/registermainpic.jpg' %}");
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin: 0;
+                float: left;
+                width: 55%;
+                padding: 10px;
+                height: 100%; /* Should be removed. Only for demonstration */
+            }
+
+            .widgets-inside {
+                justify-content: space-evenly;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 24%;
+                margin: 0 auto;
+                position: absolute;
+                top: 40%;
+                left: 35%;
+                color: white;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            #ip2 {
+                border-radius: 20px;
+                border: 2px solid #fff;
+                padding: 20px; 
+                width: 250px;
+                height: 15px;  
+            }
+
+            ::placeholder {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 16px;
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+            }
+
+        </style>
+    </head>
+    <body>
+            <div class="column-1">
+                <div class="widgets-inside">
+                    <img src="{% static 'images/createyour.png' %}" width="300px" height="70px">
+                    <input type="text" id="ip2" placeholder="username"/>
+                    <input type="text" id="ip2" placeholder="password"/>
+                    <input type="text" id="ip2" placeholder="confirm password"/>
+                    <br>
+                    <a href="#"><p>REGISTER</p></a>
+                    <a href="{% url 'login' %}"><p>< Back to Login</p></a>
+                </div>
+            </div>
+            <div class="column-2"></div>
+    </body>
+</html>
